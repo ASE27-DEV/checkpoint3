@@ -17,7 +17,9 @@ export function Country() {
     <div style={{ padding: "2rem", textAlign: "center" }}>
       <h1>{name} {emoji}</h1>
       <p><strong>Name : </strong> {name} ({code})</p>
-      <p><strong>Continent : </strong> {continent.name}</p>
+      {continent?.name && (
+        <p><strong>Continent : </strong> {continent.name}</p>
+      )}
     </div>
   );
 }
